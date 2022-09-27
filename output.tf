@@ -14,3 +14,7 @@ output "az_desc_to_name" {
 output "az_name_to_desc" {
   value = {for z in data.tencentcloud_availability_zones.zone.zones : z.name => z.description}
 }
+
+output "az_name_to_id" {
+  value = {for z in data.tencentcloud_availability_zones.zone.zones : z.name => z.id}
+}
